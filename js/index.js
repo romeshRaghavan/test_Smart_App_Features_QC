@@ -5,7 +5,7 @@ var urlPath;
 //var WebServicePath ='http://1.255.255.140:8085/NexstepWebService/mobileLinkResolver.service';
 //var WebServicePath = 'http://live.nexstepapps.com:8284/NexstepWebService/mobileLinkResolver.service';
 //var WebServicePath ='http://1.255.255.36:9898/NexstepWebService/mobileLinkResolver.service';
-var WebServicePath ='http://1.255.255.90:8085/NexstepWebService/mobileLinkResolver.service';
+var WebServicePath ='http://1.255.255.197:8082/NexstepWebService/mobileLinkResolver.service';
 var clickedFlagCar = false;
 var clickedFlagTicket = false;
 var clickedFlagHotel = false;
@@ -127,8 +127,8 @@ function commonLogin(){
  	var domainName = userNameValue.split('@')[1];
 	var jsonToDomainNameSend = new Object();
 	jsonToDomainNameSend["userName"] = domainName;
-    //jsonToDomainNameSend["mobilePlatform"] = device.platform;
-	jsonToDomainNameSend["mobilePlatform"] = "Android";
+        jsonToDomainNameSend["mobilePlatform"] = device.platform;
+	//jsonToDomainNameSend["mobilePlatform"] = "Android";
   	//var res=JSON.stringify(jsonToDomainNameSend);
 	var requestPath = WebServicePath;
 	j.ajax({
