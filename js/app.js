@@ -1907,6 +1907,7 @@ function chooseOption(imgObj,i) {
         document.getElementById("imgProcessingId").textContent  = "sending your reciept to OCR for processing...";
 		setTimeout(delayFunOK, 3000);
         var imagePath = document.getElementById("recieptid_"+i).src;
+        alert("imagePath  "+imagePath);
         sendDataToOCR(imagePath);
 
 	} else {
@@ -2494,7 +2495,8 @@ getReceiptsImage();
 
 
 function sendDataToOCR(imagePath) {
-		try {       
+		try {     
+        alert("in sendDataToOCR "+imagePath);  
         ocrImagePath = imagePath;
         encodeImage(imagePath, function (dataURL) {
     // or do whatever you want with it.
