@@ -3,7 +3,7 @@
 	xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 <!--widget id="com.expenzing.expenzing" version="1.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"-->
-    <name>Expenzing SMS App</name>
+    <name>Expenzing Nexgen TnE SMS</name>
     <description>
         Expenzing Application
     </description>
@@ -94,8 +94,8 @@
     <icon gap:platform="ios" height="114" src="res/icon/ios/icon-57-2x.png" width="114" />
     <icon gap:platform="ios" height="144" src="res/icon/ios/icon-72-2x.png" width="144" />
     <icon gap:platform="webos" src="www/res/icon/webos/icon-64.png" />
-    <icon gap:platform="winphone" src="www/res/icon/windows-phone/icon-48.png" />
-    <icon gap:platform="winphone" gap:role="background" src="www/res/icon/windows-phone/icon-173-tile.png" />
+    <!--icon gap:platform="winphone" src="www/res/icon/windows-phone/icon-48.png" />
+    <icon gap:platform="winphone" gap:role="background" src="www/res/icon/windows-phone/icon-173-tile.png" /-->
     <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
@@ -106,7 +106,7 @@
     <gap:splash gap:platform="ios" height="1334" src="res/splash/ios/default-750X1334.png" width="750" />
     <gap:splash gap:platform="ios" height="2208" src="res/splash/ios/default-1242X2208-3x.png" width="1242" />
     <gap:splash gap:platform="blackberry" src="www/res/screen/blackberry/screen-225.png" />
-    <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
+    <!--gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" /-->
     <plugin name="cordova-plugin-whitelist" version="1" />
     <access origin="*" />
     
