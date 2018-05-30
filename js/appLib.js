@@ -15,6 +15,7 @@ var errorMsgForCurrency = "Currency not synchronized successfully.";
 var app = {
     // Application Constructor
     initialize: function() {
+    	console.log("initialize camera");
 		this.bindEvents();
     },
     // Bind Event Listeners
@@ -22,11 +23,12 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+    	console.log("bind event");
 		document.addEventListener("deviceready", this.onDeviceReady, false);
     },
 	
 	onDeviceReady: function() {
-		
+		console.log("onDeviceReady");
 		var parentElement = document.getElementById("deviceready");
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');

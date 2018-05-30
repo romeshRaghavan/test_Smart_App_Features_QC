@@ -1898,7 +1898,7 @@ function saveBusinessDetailsInWishListkkk(i,smsId){
 
 
 function chooseOption(imgObj,i) {
-    console.log("1");
+    //console.log("1");
 	if (window.confirm("Send to OCR?") == true) {
         document.getElementById("imgProcessingId").textContent  = "sending your reciept to OCR for processing...";
 		setTimeout(delayFunOK, 3000);
@@ -3086,8 +3086,10 @@ function expandCollapseHide(obj,row) {
         if(jjcontent.show()){
             jjcontent.parents('.swipeout').siblings().find('.opentogglelist').hide();
             jjcontent.parents('.swipeout').siblings().find('.claimlisting').show();
+            loadJsonExpense();
 			getSelect2Data(row);
 			setDateForSms(row);
+
         }
 
     } catch(e) {
@@ -3182,6 +3184,7 @@ function getSelect2Data(rowsId){
 	
 	
          var jsonArr = [];
+         
           if(jsonAccHeadArr != null && jsonAccHeadArr.length > 0){
                 for(var i=0; i<jsonAccHeadArr.length; i++ ){
                     var stateArr = new Array();
@@ -3190,7 +3193,7 @@ function getSelect2Data(rowsId){
                 }
            }
 	
-          jsonArr.sort(function(a, b){ // sort object by Account Head Name
+           jsonArr.sort(function(a, b){ // sort object by Account Head Name
                 var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
                 if (nameA < nameB) //sort string ascending
                     return -1 
@@ -3203,8 +3206,9 @@ function getSelect2Data(rowsId){
             console.log(accHead)
             j("#"+accHead).select2({
                 data:{ results: jsonArr, text: 'name' },
-                minimumResultsForSearch: -1,
                 placeholder : "Select Account Head",
+                minimumResultsForSearch: -1,
+             
                 formatResult: function(result) {
                     if ( ! isJsonString(result.id))
                         result.id = JSON.stringify(result.id);
@@ -3264,20 +3268,25 @@ function updateSmsRecord(rowId , businessId){
 	var exp_name_val;
 	var currency_id;
 	var currency_val;
+
+    console.log("rowId  "+rowId)
 	if(j("#accountHead_"+rowId).select2('data') != null){
 			acc_head_id = j("#accountHead_"+rowId).select2('data').id;
+            console.log("acc_head_id  "+acc_head_id)
 			acc_head_val = j("#accountHead_"+rowId).select2('data').name;
 		}else{
 			acc_head_id = '-1';
 		}
 		if(j("#expenseName_"+rowId).select2('data') != null){
 			exp_name_id = j("#expenseName_"+rowId).select2('data').id;
+            console.log("exp_name_id  "+exp_name_id)
 			exp_name_val = j("#expenseName_"+rowId).select2('data').name;
 		}else{
 			exp_name_id = '-1';
 		}	
 		if(j("#currency_"+rowId).select2('data') != null){
 			currency_id = j("#currency_"+rowId).select2('data').id;
+            console.log("currency_id  "+currency_id)
 			currency_val = j("#currency_"+rowId).select2('data').name;
 		}else{
 			currency_id = '-1';
@@ -3292,8 +3301,9 @@ function updateSmsRecord(rowId , businessId){
 
 	
 	if(validateExpenseDetailsForSMS(acc_head_id,exp_name_id,currency_id,expDate,fromLoc,toLoc,unit,amount,narration)){
-	
-	
+	  
+	   console.log("acc_head_id  "+acc_head_id+" exp_name_id "+exp_name_id+" currency_id "+currency_id+
+                " expDate "+expDate+"fromLoc "+fromLoc+" toLoc "+toLoc+"unit "+unit+"amount"+amount+"narration"+narration);
          if (mydb) {
 	            mydb.transaction(function (t) {
 	                t.executeSql("update BusinessExpDetailsForSMS set accHeadId ="+acc_head_id+", expNameId ="+exp_name_id+", expDate ='"+expDate+"', expFromLoc ='"+fromLoc+"', expToLoc ='"+toLoc+"', expNarration ='"+narration+"',   expUnit ="+unit+", expAmt="+amount+",currencyId="+currency_id+" where busExpId ="+businessId+";");
@@ -3563,7 +3573,7 @@ function updateOcrExpenseDetails(i,ocrExpId){
         var currency_id_ocr;
         var currency_val_ocr;
 
-        console.log("accountHeadOcr_"+i);
+       
         if(j("#accountHeadOcr_"+i).select2('data') != null){
             acc_head_id_ocr = j("#accountHeadOcr_"+i).select2('data').id;
             acc_head_val_ocr = j("#accountHeadOcr_"+i).select2('data').name;
@@ -3571,15 +3581,14 @@ function updateOcrExpenseDetails(i,ocrExpId){
             acc_head_id_ocr = '-1';
         }
 
-        alert("accHeadId   value " +acc_head_val_ocr);
-
+      
         if(j("#expenseNameOcr_"+i).select2('data') != null){
             exp_name_id_ocr = j("#expenseNameOcr_"+i).select2('data').id;
             exp_name_val_ocr = j("#expenseNameOcr_"+i).select2('data').name;
         }else{
             exp_name_id_ocr = '-1';
         }
-          alert("expNameId   value " +exp_name_id_ocr +"value " +exp_name_val_ocr);
+       
 
 
            if(j("#ocrCurrency_"+i).select2('data') != null){
@@ -3588,27 +3597,27 @@ function updateOcrExpenseDetails(i,ocrExpId){
         }else{
             currency_id_ocr = '-1';
         }
-          alert("currencyId_   " +currency_id_ocr +"value " +currency_val_ocr);
+    
 
 
 
 
 
              
-       var ocrExpDate = document.getElementById('ocrExpDate_'+i).value;
+        var ocrExpDate = document.getElementById('ocrExpDate_'+i).value;
 
 
         var ocrFromLoc = document.getElementById('ocrFromLoc_'+i).value;
-        alert("ocrFromLoc   value " +ocrFromLoc);
+       
         var ocrToLoc = document.getElementById('ocrToLoc_'+i).value;
-        alert("ocrToLoc   value " +ocrToLoc);
+    
         var ocrNarration =  document.getElementById('ocrNarration_'+i).value;    
-        alert("ocrNarration   value " +ocrNarration);
+       
         
         var ocrUnit = document.getElementById('ocrUnit_'+i).value;
-        alert("ocrUnit   value " +ocrUnit);
+      
         var ocrAmount =  document.getElementById('ocrAmount_'+i).value;
-        alert("ocrAmount   value " +ocrAmount);
+       
 
         var isEntitlementExceeded = "";
   
@@ -3650,26 +3659,20 @@ function deleteOcrRecord(ocrExpId){
 function addToOCRExpense(){
     
     if (mydb) {
-        var accHeadId = document.getElementById('accountHead').value;  
-        alert("accHeadId   value " +accHeadId);
-        var expNameId = document.getElementById('expenseName').value; 
-                alert("expNameId   value " +expNameId);
+        var accHeadId = document.getElementById('accountHead').value;      
+        var expNameId = document.getElementById('expenseName').value;             
         var ocrExpDate = document.getElementById('ocrExpDate').value;
-
-
-        var ocrFromLoc = document.getElementById('ocrFromLoc').value;
-        alert("ocrFromLoc   value " +ocrFromLoc);
-        var ocrToLoc = document.getElementById('ocrToLoc').value;
-        alert("ocrToLoc   value " +ocrToLoc);
+        var ocrFromLoc = document.getElementById('ocrFromLoc').value;     
+        var ocrToLoc = document.getElementById('ocrToLoc').value;   
         var ocrnarration =  document.getElementById('ocrnarration').value;    
-        alert("ocrnarration   value " +ocrnarration);
+        
         
         var ocrUnit = document.getElementById('ocrUnit').value;
-        alert("ocrUnit   value " +ocrUnit);
+        
         var ocrAmount =  document.getElementById('ocrAmount').value;
-        alert("ocrAmount   value " +ocrAmount);
+        
         var currencyId = document.getElementById('currency').value; 
-        alert("currencyId   value " +currencyId);
+      
         var isEntitlementExceeded = "";
         var busExpAttachment = "";
         var wayPointunitValue = "";
@@ -3735,7 +3738,7 @@ function ocrSelect2(ocrRow1){
                         return 0 //default return value (no sorting)
             })
             var accHeadOcr = "accountHeadOcr_"+ocrRow1    ;
-            console.log(accHeadOcr)
+           // console.log(accHeadOcr)
             j("#"+accHeadOcr).select2({
                 data:{ results: jsonArr, text: 'name' },
                 minimumResultsForSearch: -1,
@@ -3772,7 +3775,7 @@ function ocrSelect2(ocrRow1){
     }
 
       var ocrCurrency = "ocrCurrency_"+ocrRow1    ;
-         console.log(ocrCurrency)
+        // console.log(ocrCurrency)
 
     j("#"+ocrCurrency).select2({
         data:{ results: jsonArr, text: 'name' },
@@ -3817,7 +3820,7 @@ function ocrSelect2(ocrRow1){
     }
 
       var expNameOcr = "expenseNameOcr_"+ocrRow1    ;
-         console.log(expNameOcr)
+      //   console.log(expNameOcr)
 
     j("#"+expNameOcr).select2({
         data:{ results: jsonArr, text: 'name' },
@@ -3869,9 +3872,9 @@ function expandCollapse(obj,ocrRow) {
 } 
 
 function datePickerForOcr(ocrRow1){
-alert("in date ");
+//alert("in date ");
   var ocrExpDate = "ocrExpDate_"+ocrRow1 ;
-  console.log("ocrExpDate  "+ocrExpDate);
+ // console.log("ocrExpDate  "+ocrExpDate);
       var currentMonth;
             var currentDate;
             var currentYear;
