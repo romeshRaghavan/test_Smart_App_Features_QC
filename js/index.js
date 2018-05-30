@@ -1969,8 +1969,8 @@ function oprationONTravelSettlementExp(){
 	}
 
 	function loaded() {
-        //pictureSource=navigator.camera.PictureSourceType;
-        //destinationType=navigator.camera.DestinationType;
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
 		var parentElement = document.getElementById("deviceready");
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
