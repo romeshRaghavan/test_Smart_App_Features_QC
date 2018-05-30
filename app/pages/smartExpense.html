@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="theme-color" content="#ffffff">
+      <title>Expenzing App</title>
+      <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css">
+      <link rel="stylesheet" href="css/framework7/css/framework7.ios.min.css">
+      <link rel="stylesheet" href="css/swipebox/src/css/swipebox.css">
+      <link rel="stylesheet" href="css/app.css">
+      <link rel="stylesheet" href="#" id="theme-style">
+      <link rel="stylesheet" href="/select2/select2.css"/>
+     <link rel="stylesheet" href="css/jquery-confirm.min.css">
+   </head>
+   <body>
+      <div class="statusbar-overlay"></div>
+      <div class="panel-overlay"></div>
+      <!-- Left panel -->
+      <div class="panel panel-left panel-reveal">
+         <div class="line"></div>
+         <div class="logo-box">
+            <h2>Expenzing</h2>
+            <div>Spend Management Software</div>
+         </div>
+         <div class="list-block mt-15">
+            <div class="list-group">
+               <nav>
+                  <ul>
+                     <li class="divider">
+                        Menu
+                     </li>
+                     <li>
+                        <a href="" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-home"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Link 1</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="charts.html" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-area-chart"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Link 2</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="post1.html" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-file-text-o"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Link 3</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="blog.html" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-newspaper-o"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Link 4</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="index-test.html" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-magic"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Link 5</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="gallery-3col.html" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-picture-o"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Link 6</div>
+                           </div>
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <!-- Right panel -->
+      <div class="panel panel-right panel-reveal">
+         <div class="line"></div>
+         <div class="user-banner">
+            <span class="ava-box">
+               <img src="images/profile-big.jpg" alt="">
+            </span>
+         </div>
+         <div class="welcome-msg">
+            <h3>Hello <strong>Vinay</strong>!</h3>
+            <h4>How is your day going?</h4>
+         </div>
+         <div class="list-block mt-15">
+            <div class="list-group">
+               <nav>
+                  <ul>
+                     <li>
+                        <a href="" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-user"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Profile</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="settings.html" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-cog"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Settings</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-envelope"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Add expenses</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-heart-o"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">My wishlist</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-users"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Add receipts</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-users"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">View status</div>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="index.html" class="item-link close-panel item-content">
+                           <div class="item-media">
+                              <i class="fa fa-sign-out"></i>
+                           </div>
+                           <div class="item-inner">
+                              <div class="item-title">Logout</div>
+                           </div>
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <!-- Views -->
+      <div class="views">
+         <div class="view view-main">
+            <div class="navbar">
+               <div class="navbar-inner">
+                  <div class="left lefticonspace">
+                     <a href="#" class="link icon-only open-panel">
+                     <span class="kkicon icon-menu"></span>
+                     </a>
+                  </div>
+                  <div class="center sliding explogo"><img src="images/expenzing-logo1.png" alt=""></div>
+                  <div class="right">
+                     <a href="#" class="link icon-only" onclick = "reload();">
+                        <span class="kkicon profilepic"><img src="images/add-receipt.png" alt="" class="blk"></span>
+                     </a>
+                     <a href="#" class="link icon-only">
+                        <span class="kkicon profilepic"><img src="images/add-claim.png" alt="" class="blk"></span>
+                     </a>
+                     <a href="#" onclick ="" class="link icon-only addexpense">
+                        <span class="kkicon profilepic"><img src="images/add-exp.png" alt="" class="blk"></span>
+                     </a>
+                     <a href="" onclick ="" class="link icon-only">
+                        <span class="kkicon profilepic"><img src="images/wishlist.png" alt="" class="blk"></span>
+                     </a>
+                     <a href="#" class="link icon-only">
+                        <span class="kkicon profilepic"><img src="images/send-approval.png" alt="" class="blk"></span>
+                     </a>
+                     <a href="#" class="link icon-only">
+                        <span class="kkicon profilepic"><img src="images/voice-icon.png" alt="" class="blk"></span>
+                     </a>
+                     <a href="#" class="link icon-only open-panel" data-panel="right">
+                        <span class="kkicon profilepic"><img src="images/profile-sml.jpg" alt="" class="blk"></span>
+                     </a>
+
+                  </div>
+               </div>
+            </div>
+            <div class="pages navbar-fixed toolbar-fixed">
+               <div data-page="index" class="page page-bg">
+                  <div class="toolbar" style="display: none;">
+                     <div class="toolbar-inner">
+                        <a href="#" data-picker=".picker-social" class="open-picker link">
+                        <span class="icon-share2"></span>
+                        </a>
+                        <a href="#" class="link">
+                        <span class="icon-color-sampler"></span>
+                        </a>
+                        <a href="#" class="link open-popup" data-popup=".popup-splash">
+                        <span class="icon-bookmark2"></span>
+                        </a>
+                        <a href="#" class="link open-popup" data-popup=".popup-login">
+                        <span class="icon-lock"></span>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="page-content">
+                     <div class="view another-view">
+                        <!-- Pages -->
+                        <div class="pages">
+                           <div class="page no-toolbar">
+                              <div class="content-block tabshead">
+                                 <div class="buttons-row">
+                                    <a href="#tab1" class="tab-link active button button-secondary">Smart Claims</a>
+                                    <a href="#tab2" class="tab-link button button-secondary">My Receipts</a>
+                                 </div>
+                              </div>
+                              <div class="tabs-animated-wrap" style="overflow: visible;">
+                                 <div class="tabs">
+                                    <div id="tab1" class="tab active">
+                                       <div class="list-block mt-10 comments-box">
+                                          <!-- this section for Add claim -->
+                                          <div class="addclaim">
+                                             <h4>Add Claim</h4>
+                                             <div class="item-inner comments-list">
+                                                <div class="image">
+                                                   <span class="ava">
+                                                      <img src="images/dummy-image.png" alt="">
+                                                   </span>
+                                                </div>
+                                                <div class="text">
+                                                   <div class="info">
+                                                      <span class="data">Expense type : <select>
+                                                         <option>Expense 1</option>
+                                                         <option>Expense 2</option>
+                                                         <option>Expense 3</option>
+                                                      </select> Currency :  <select>
+                                                         <option>currency 1</option>
+                                                         <option>currency 2</option>
+                                                         <option>currency 3</option>
+                                                      </select></span>
+                                                   </div>
+                                                   <div class="info">
+                                                      <span class="data">SMS date : <input type="text" placeholder="Date"> Amount Rs. <input type="text" placeholder="Amount"></span>
+                                                   </div>
+                                                   <div class="comment">
+                                                      <textarea placeholder="Narration"></textarea>
+                                                   </div>
+                                                   <div class="allbtn"><button class="btnall">send for approval</button> <button class="btnall">Add to wishlist</button> <button class="btnall">Delete</button></div>
+                                                </div>
+                                             </div>
+                                             <div class="closeme"><img src="images/closeme.png" alt=""></div>
+                                          </div>
+                                          <ul id = "box8">
+                                             <li class="swipeout">
+                                                <div class="swipeout-content">
+                                                   <div class="item-content claimlisting">
+                                                      <div class="item-inner comments-list">
+                                                         <div class="image">
+                                                            <span class="ava">
+                                                            <img src="images/freecharge-200x200_2163.jpg" alt="">
+                                                            </span>
+                                                         </div>
+                                                         <div class="text">
+                                                            <div class="info">
+                                                               <span class="data">SMS date : 20th Dec 2016 | Amount Rs. 2000</span>
+                                                            </div>
+                                                            <div class="comment">
+                                                               Hi your order #14247962455 of Rs. 2490 for 2 items is successfull.
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="opentogglelist">
+                                                      <div class="item-inner comments-list">
+                                                         <div class="image">
+                                                            <span class="ava">
+                                                            <img src="images/freecharge-200x200_2163.jpg" alt="">
+                                                            </span>
+                                                         </div>
+                                                         <div class="text">
+                                                            <div class="info">
+                                                               <span class="data">Expense type : <select>
+                                                                  <option>Expense 1</option>
+                                                                  <option>Expense 2</option>
+                                                                  <option>Expense 3</option>
+                                                               </select> Currency :  <select>
+                                                                  <option>currency 1</option>
+                                                                  <option>currency 2</option>
+                                                                  <option>currency 3</option>
+                                                               </select></span>
+                                                            </div>
+                                                            <div class="info">
+                                                               <span class="data">SMS date : <input type="text" placeholder="Date"> Amount Rs. <input type="text" placeholder="Amount"></span>
+                                                            </div>
+                                                            <div class="comment">
+                                                               <textarea placeholder="Narration"></textarea>
+                                                            </div>
+                                                            <div class="allbtn"><button class="btnall">send for approval</button> <button class="btnall">Add to wishlist</button> <button class="btnall">Delete</button></div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="swipeout-actions-right">
+                                                   <a href="#" class="action-green js-up">Send for Approval</a>
+                                                   <a href="#" class="action-red js-down">Add to wishlist</a>
+                                                   <a href="#" class="action-blue js-down">Delete</a>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                    <div id="tab2" class="tab">
+                                       <div class="list-block mt-10 comments-box">
+                                          <ul>
+                                             <li class="swipeout">
+                                                <div class="swipeout-content">
+                                                   <div class="item-content claimlisting">
+                                                      <div class="item-inner comments-list">
+                                                         <div class="image">
+                                                            <span class="ava">
+                                                            <img src="images/Paytm_logo.jpg" alt="">
+                                                            </span>
+                                                         </div>
+                                                         <div class="text">
+                                                            <div class="info">
+                                                               <span class="data">SMS date : 20th Dec 2016 | Amount Rs. 2000</span>
+                                                            </div>
+                                                            <div class="comment">
+                                                               Hi your order #14247962455 of Rs. 2490 for 2 items is successfull. 
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="opentogglelist">
+                                                      <div class="item-inner comments-list">
+                                                         <div class="image">
+                                                            <span class="ava">
+                                                            <img src="images/freecharge-200x200_2163.jpg" alt="">
+                                                            </span>
+                                                         </div>
+                                                         <div class="text">
+                                                            <div class="info">
+                                                               <span class="data">Expense type : <select>
+                                                                  <option>Expense 1</option>
+                                                                  <option>Expense 2</option>
+                                                                  <option>Expense 3</option>
+                                                               </select> Currency :  <select>
+                                                                  <option>currency 1</option>
+                                                                  <option>currency 2</option>
+                                                                  <option>currency 3</option>
+                                                               </select></span>
+                                                            </div>
+                                                            <div class="info">
+                                                               <span class="data">SMS date : <input type="text" placeholder="Date"> Amount Rs. <input type="text" placeholder="Amount"></span>
+                                                            </div>
+                                                            <div class="comment">
+                                                               <textarea placeholder="Narration"></textarea>
+                                                            </div>
+                                                            <div class="allbtn"><button class="btnall">send for approval</button> <button class="btnall">Add to wishlist</button> <button class="btnall">Delete</button></div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="swipeout-actions-right">
+                                                   <a href="#" class="action-green js-up">Send for Approval</a>
+                                                   <a href="#" class="action-red js-down">Add to wishlist</a>
+                                                   <a href="#" class="action-blue js-down">Delete</a>
+                                                </div>
+                                             </li>
+                                            
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div style="display:none" id="loading_Cat" >
+               <img src="../../images/loading2.gif" id="loading-image_Cat" alt="Loading..." >
+		</div>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="css/framework7/js/framework7.min.js"></script>
+      <script type="text/javascript" src="css/swipebox/src/js/jquery.swipebox.min.js"></script>
+      <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="js/Chart.js"></script>
+      <script type="text/javascript" src="js/jflickrfeed.min.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+      <script type="text/javascript" src="select2/select2.js"></script>
+      <script type="text/javascript" src="js/jquery-confirm.min.js"></script>
+      <script type="text/javascript" src="js/commonUtilities.js"></script>
+      <script type="text/javascript" src="js/appLib.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+
+   <script>   
+    fetchSMSClaim8();
+
+   </script>
+    <script src="cordova.js"></script>
+   </body>
+</html>
