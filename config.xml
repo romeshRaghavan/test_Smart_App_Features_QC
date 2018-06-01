@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="" version="1.5" android-versionCode="93" 
+<widget id="tne.expenzingNexgenTnESMS" version="1.5" android-versionCode="93" 
 	xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 <!--widget id="com.expenzing.expenzing" version="1.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"-->
