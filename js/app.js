@@ -4338,7 +4338,7 @@ function sendForApprovalBusinessDetailsOcr(expense_Date,jsonBEArr,busExpDetailsA
     // jsonFindEA["emplAdvVoucherNo"] = "";
     // jsonFindEA["empAdvTitle"] ="";
     // jsonFindEA["Amount"] = "";
-    jsonEmplAdvanceArr.push(jsonFindEA);
+    // jsonEmplAdvanceArr.push(jsonFindEA);
      jsonToSaveBE["employeeAdvDeatils"] =jsonEmplAdvanceArr;
    
      jsonToSaveBE["imageAttach"] = "";
@@ -5316,11 +5316,7 @@ function sendForApprovalBusinessDetailsBE(expense_Date,jsonBEArr,busExpDetailsAr
     var jsonEmplAdvanceArr = [];
     var jsonFindEA = new Object();
 
-    // jsonFindEA["empAdvID"] = "";
-    // jsonFindEA["emplAdvVoucherNo"] = "";
-    // jsonFindEA["empAdvTitle"] ="";
-    // jsonFindEA["Amount"] = "";
-    jsonEmplAdvanceArr.push(jsonFindEA);
+       // jsonEmplAdvanceArr.push(jsonFindEA);
      jsonToSaveBE["employeeAdvDeatils"] =jsonEmplAdvanceArr;
    
      jsonToSaveBE["imageAttach"] = "";
